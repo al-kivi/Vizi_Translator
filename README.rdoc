@@ -1,0 +1,54 @@
+= ViziTranslator
+
+== Introduction
+
+This gem module provides a classes to support the language translation of text files or text strings.
+The Frengly on-line service requires registration and prvoides access with a username and password.
+The gem module uses the NET::HTTP library to access the Frengly service.
+Find out more about the translation service at www.frengly.com.
+  
+== Installation
+
+Just run:
+
+    gem install vizi_translator
+
+This sample application will read a text file for translation.
+
+The sample text file is a index markdown file written in English.
+The English markdown file provides content for Vizitrax's home page.
+The translated file can be used to replace the English content with content for another language.
+
+== Usage
+
+	require 'vizi_translator'
+  
+# Set username and password. Username must be registered at Frengly
+	username = "akivi"
+	password = "welcome123"
+	
+# Set target language for translation
+	targetlanguage = "fr"
+
+	begin
+# 	Open test file for translation
+		@test = File.read(Dir.pwd+'./data/index.md')
+
+# 	Initiate Translator class        
+		translator = Vizi::Translator.new
+#		Get array with available language codes
+		@langcodes = translator.getcodes
+#		Get hashed list of languages and language codes
+		@langlist = translator.getlist
+    
+#		Call method to do the translation
+		@testnew = translator.gettext(username, password, @test, targetlanguage)
+		
+	end
+	
+
+== License
+
+This code is made available under the MIT license.
+
+All users of this code should read and follow the acceptable use policies for the Frengly translation service.
