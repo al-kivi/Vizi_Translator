@@ -13,6 +13,8 @@ Just run:
 
     gem install vizi_translator
 
+The following gems are required 'net/http', 'uri' and 'xmlsimple'. You can install xmlsimple with 'get install xml-simple'
+
 This sample application will read a text file for translation.
 
 The sample text file is a index markdown file written in English.
@@ -24,8 +26,8 @@ The translated file can be used to replace the English content with content for 
 	require 'vizi_translator'
   
 # Set username and password. Username must be registered at Frengly
-	username = "akivi"
-	password = "welcome123"
+	username = "your_username"
+	password = "your_password"
 	
 # Set target language for translation
 	targetlanguage = "fr"

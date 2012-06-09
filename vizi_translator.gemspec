@@ -2,7 +2,7 @@ require 'rubygems'
 
 spec = Gem::Specification.new do |s|
   s.name = 'vizi_translator'
-  s.version = '0.2.0'
+  s.version = '0.3.0'
   s.summary = "Language translator that provides a wrapper to the Frengly on-line service"
   s.description = "This gem module provides a classes to support the language translation of text files or text strings.
   The Frengly on-line service requires registration and prvoides access with a username and password.

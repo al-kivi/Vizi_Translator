@@ -18,8 +18,8 @@ p 'starting'
   syslog.info "Starting ... >>> "+Time.now.to_s
   
 # Set username and password. Username must be registered at Frengly
-	username = "akivi"
-	password = "welcome123"
+	username = "your_username"
+	password = "your_password"
 	
 # Set target language for translation
 	targetlanguage = "fr"
