@@ -23,30 +23,30 @@ The translated file can be used to replace the English content with content for 
 
 == Usage
 
-	require 'vizi_translator'
+    require 'vizi_translator'
   
-# Set username and password. Username must be registered at Frengly
-	username = "your_username"
-	password = "your_password"
+    # Set username and password. Username must be registered at Frengly
+    username = "your_username"
+    password = "your_password"
 	
-# Set target language for translation
-	targetlanguage = "fr"
+    # Set target language for translation
+    targetlanguage = "fr"
 
-	begin
-# 	Open test file for translation
-		@test = File.read(Dir.pwd+'./data/index.md')
+    begin
+        # Open test file for translation
+        @test = File.read(Dir.pwd+'./data/index.md')
 
-# 	Initiate Translator class        
-		translator = Vizi::Translator.new
-#		Get array with available language codes
-		@langcodes = translator.getcodes
-#		Get hashed list of languages and language codes
-		@langlist = translator.getlist
+        # Initiate Translator class        
+        translator = Vizi::Translator.new
+        # Get array with available language codes
+        @langcodes = translator.getcodes
+        # Get hashed list of languages and language codes
+        @langlist = translator.getlist
     
-#		Call method to do the translation
-		@testnew = translator.gettext(username, password, @test, targetlanguage)
-		
-	end
+        # Call method to do the translation
+        @testnew = translator.gettext(username, password, @test, targetlanguage)
+    
+    end
 	
 
 == License
