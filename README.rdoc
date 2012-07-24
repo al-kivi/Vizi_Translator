@@ -28,7 +28,7 @@ The translated file can be used to replace the English content with content for 
     # Set username and password. Username must be registered at Frengly
     username = "your_username"
     password = "your_password"
-	
+
     # Set target language for translation
     targetlanguage = "fr"
 
